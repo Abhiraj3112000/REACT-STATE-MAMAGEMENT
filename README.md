@@ -1,2 +1,2 @@
 # Code for my blog on react state manipulation using class and functional components.
-[Blog Link](https://abhiraj3112000.medium.com/react-js-state-management-in-class-component-and-functional-component-cd2e1c778eb5)
+## [Blog Link](https://abhiraj3112000.medium.com/react-js-state-management-in-class-component-and-functional-component-cd2e1c778eb5)
