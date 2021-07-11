@@ -1,5 +1,11 @@
-import React,{ useState } from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+//UNCOMMENT ANY ONE OF THE CODE SNIPPETS BELOW, EACH CODE SNIPPET IS SEPARATED BY FIVE EMPTY LINES 
+//UNCOMMENT ONLY ONE AT A TIME, KEEPING ALL OTHERS COMMENTED AND THEN START YOUR PROGRAM.
+
+
+
 
 // function App() {
 //   const [count, setCount] = useState(2);
@@ -13,8 +19,12 @@ import './App.css';
 // }
 
 
+
+
+
+
 // function App() {
-//   const [count, setCount] = useState(2);
+// const [count, setCount] = useState(2);
 //   let compute=(ch,count)=>{
 //    return  ch===1?() => setCount(count+1):
 //            ()=> setCount(count-1)
@@ -27,6 +37,9 @@ import './App.css';
 //     </div>
 //   );
 // }
+
+
+
 
 
 // function App() {
@@ -43,6 +56,9 @@ import './App.css';
 //     </div>
 //   );
 // }
+
+
+
 
 
 // function App() {
@@ -63,46 +79,89 @@ import './App.css';
 // }
 
 
-function App() {
-  const [count, setCount] = useState(0);
-  function increment(){
-   setCount(prevCount =>prevCount+1)
-  }
-  
-  const decrement=()=>
-    setCount(prevCount =>prevCount-1)
-   
-  return (
-    <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
-     <button onClick={increment} style={{width:"50px",height:"50px"}}>+</button>
-     <p>{count}</p>
-     <button onClick={decrement} style={{width:"50px",height:"50px"}}>-</button>
-    </div>
-  );
-}
+
+
+
+// function App() {
+//   const [count, setCount] = useState(0);
+//   function increment(){
+//    setCount(prevCount =>prevCount+1)
+//   }
+
+//   const decrement=()=>
+//     setCount(prevCount =>prevCount-1)
+
+//   return (
+//     <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
+//      <button onClick={increment} style={{width:"50px",height:"50px"}}>+</button>
+//      <p>{count}</p>
+//      <button onClick={decrement} style={{width:"50px",height:"50px"}}>-</button>
+//     </div>
+//   );
+// }
+
+
+
+
+
+// function App() {
+//   const [state, setState] = useState({
+//     count: 40,
+//     purpose: "demo",
+//   });
+//  const count=state.count;
+//  const purpose=state.purpose;
+
+//   function increment() {
+//     setState(prevState => {
+//       return { ...prevState,count: prevState.count + 1 };
+//     });
+//   }
+
+//  function decrement() {
+//     setState(prevState => {
+//       return { ...prevState,count: prevState.count - 1 };
+//     });
+//   }
+
+//   return (
+//     <div
+//       className="App"
+//       style={{ display: "flex", width: "80%", justifyContent: "space-around" }}
+//     >
+//       <button onClick={increment} style={{ width: "50px", height: "50px" }}>
+//         +
+//       </button>
+//       <p>{count}{" "}{purpose}</p>
+//       <button onClick={decrement} style={{ width: "50px", height: "50px" }}>
+//         -
+//       </button>
+//     </div>
+//   );
+// }
+
+
+
+
 
 
 // class App extends React.Component {
-
 //     constructor(props) {
 //     super(props)
-//     this.state = { count: 0 }
+//     this.state = { count: 0, purpose:"demo"}
 //     }
-       
-//using arrow functions bind the function with the current instance
-  //this can also be done by binding the function inside a constructor
-  //to this
+
 //     increment=()=>
 //       this.setState({count : this.state.count+1})
-    
+
 //     decrement=()=>
 //       this.setState({count : this.state.count-1})
-  
+
 //     render(){
 //     return(
 //       <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
 //             <button onClick={this.increment} style={{width:"50px",height:"50px"}}>+</button>
-//             <p>{this.state.count}</p>
+//             <p>{this.state.count}{" "}{this.state.purpose}</p>
 //             <button onClick={this.decrement} style={{width:"50px",height:"50px"}}>-</button>
 //       </div>
 //     )
@@ -110,32 +169,30 @@ function App() {
 // }
 
 
-// const InitialState={
-//   count:0
-// }
-// class App extends React.Component {
-//   state ={...InitialState};
-
-//   increment=()=>
-//     this.setState({count : this.state.count+1})
-  
-//   decrement=()=>
-//     this.setState({count : this.state.count-1})
-  
-
-//   render(){
-//    const { count } = this.state;
-//     return(
-//       <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
-//             <button onClick={this.increment} style={{width:"50px",height:"50px"}}>+</button>
-//             <p>{count}</p>
-//             <button onClick={this.decrement} style={{width:"50px",height:"50px"}}>-</button>
-//           </div>
-//     )
-//   }
-// }
 
 
+const InitialState={
+  count:0
+}
+class App extends React.Component {
+  state ={...InitialState};
 
+  increment=()=>
+    this.setState({count : this.state.count+1})
+
+  decrement=()=>
+    this.setState({count : this.state.count-1})
+
+  render(){
+   const { count } = this.state;
+    return(
+      <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
+            <button onClick={this.increment} style={{width:"50px",height:"50px"}}>+</button>
+            <p>{count}</p>
+            <button onClick={this.decrement} style={{width:"50px",height:"50px"}}>-</button>
+          </div>
+    )
+  }
+}
 
 export default App;
