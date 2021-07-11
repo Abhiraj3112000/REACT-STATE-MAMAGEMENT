@@ -104,41 +104,40 @@ import "./App.css";
 
 
 
-// function App() {
-//   const [state, setState] = useState({
-//     count: 40,
-//     purpose: "demo",
-//   });
-//  const count=state.count;
-//  const purpose=state.purpose;
+function App() {
+  const [state, setState] = useState({
+    count: 0,
+    purpose: "demo",
+  });
+ const {count, purpose} = state;
+ 
+  function increment() {
+    setState(prevState => {
+      return { ...prevState,count: prevState.count + 1};
+    });
+  }
 
-//   function increment() {
-//     setState(prevState => {
-//       return { ...prevState,count: prevState.count + 1 };
-//     });
-//   }
+ function decrement() {
+    setState(prevState => {
+      return { ...prevState,count: prevState.count - 1 };
+    });
+  }
 
-//  function decrement() {
-//     setState(prevState => {
-//       return { ...prevState,count: prevState.count - 1 };
-//     });
-//   }
-
-//   return (
-//     <div
-//       className="App"
-//       style={{ display: "flex", width: "80%", justifyContent: "space-around" }}
-//     >
-//       <button onClick={increment} style={{ width: "50px", height: "50px" }}>
-//         +
-//       </button>
-//       <p>{count}{" "}{purpose}</p>
-//       <button onClick={decrement} style={{ width: "50px", height: "50px" }}>
-//         -
-//       </button>
-//     </div>
-//   );
-// }
+  return (
+    <div
+      className="App"
+      style={{ display: "flex", width: "80%", justifyContent: "space-around" }}
+    >
+      <button onClick={increment} style={{ width: "50px", height: "50px" }}>
+        +
+      </button>
+      <p>{count}{" "}{purpose}</p>
+      <button onClick={decrement} style={{ width: "50px", height: "50px" }}>
+        -
+      </button>
+    </div>
+  );
+}
 
 
 
@@ -171,28 +170,28 @@ import "./App.css";
 
 
 
-const InitialState={
-  count:0
-}
-class App extends React.Component {
-  state ={...InitialState};
+// const InitialState={
+//   count:30
+// }
+// class App extends React.Component {
+//   state ={...InitialState};
 
-  increment=()=>
-    this.setState({count : this.state.count+1})
+//   increment=()=>
+//     this.setState({count : this.state.count+1})
 
-  decrement=()=>
-    this.setState({count : this.state.count-1})
+//   decrement=()=>
+//     this.setState({count : this.state.count-1})
 
-  render(){
-   const { count } = this.state;
-    return(
-      <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
-            <button onClick={this.increment} style={{width:"50px",height:"50px"}}>+</button>
-            <p>{count}</p>
-            <button onClick={this.decrement} style={{width:"50px",height:"50px"}}>-</button>
-          </div>
-    )
-  }
-}
+//   render(){
+//    const { count } = this.state;
+//     return(
+//       <div className="App" style={{display:"flex",width:"80%",justifyContent:"space-around"}}>
+//             <button onClick={this.increment} style={{width:"50px",height:"50px"}}>+</button>
+//             <p>{count}</p>
+//             <button onClick={this.decrement} style={{width:"50px",height:"50px"}}>-</button>
+//           </div>
+//     )
+//   }
+// }
 
 export default App;
